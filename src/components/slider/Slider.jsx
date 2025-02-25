@@ -11,7 +11,7 @@ import { Autoplay, Pagination, } from 'swiper/modules';
 const Slider = () => {
 
     return (
-        <div className=' px-4 pt-16'>
+        <div className=' px-4'>
 
             <Swiper
                 autoplay={{
