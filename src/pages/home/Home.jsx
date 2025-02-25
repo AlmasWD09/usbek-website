@@ -1,7 +1,14 @@
+import Categories from "../../components/home/Categories"
+import MostPopular from "../../components/home/MostPopular"
+import Slider from "../../components/slider/Slider"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className="">
+      <Categories />
+      <Slider />
+      <MostPopular />
+    </div>
   )
 }
 
