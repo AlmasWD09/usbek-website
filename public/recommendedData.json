@@ -8,56 +8,77 @@
     },
     {
         "id": 2,
-        "image": "/mostPopular/photo2.png",
+        "image": "/mostPopular/photo1.png",
         "title": "Ab Wheel",
         "price": "50.00 CND",
         "quantity": "03"
     },
     {
         "id": 3,
-        "image": "/mostPopular/photo3.png",
+        "image": "/mostPopular/photo1.png",
         "title": "The Ball",
         "price": "64.00 CND",
         "quantity": "05"
     },
     {
         "id": 4,
-        "image": "/mostPopular/photo4.png",
+        "image": "/mostPopular/photo1.png",
         "title": "Ab Wheel",
         "price": "34.00 CND",
         "quantity": "01"
     },
     {
         "id": 5,
-        "image": "/mostPopular/photo5.png",
+        "image": "/mostPopular/photo1.png",
         "title": "The Ball",
         "price": "34.00 CND",
         "quantity": "04"
     },
     {
         "id": 6,
-        "image": "/mostPopular/photo6.png",
+        "image": "/mostPopular/photo1.png",
         "title": "The Ball",
         "price": "34.00 CND",
         "quantity": "06"
     },
     {
         "id": 7,
-        "image": "/mostPopular/photo7.png",
+        "image": "/mostPopular/photo1.png",
         "title": "The Ball",
         "price": "34.00 CND",
         "quantity": "02"
     },
     {
         "id": 8,
-        "image": "/mostPopular/photo8.png",
+        "image": "/mostPopular/photo1.png",
         "title": "Ab Wheel",
         "price": "50.00 CND",
         "quantity": "03"
     },
     {
         "id": 9,
-        "image": "/mostPopular/photo9.png",
+        "image": "/mostPopular/photo1.png",
+        "title": "The Ball",
+        "price": "64.00 CND",
+        "quantity": "05"
+    },
+    {
+        "id": 10,
+        "image": "/mostPopular/photo1.png",
+        "title": "The Ball",
+        "price": "64.00 CND",
+        "quantity": "05"
+    },
+    {
+        "id": 11,
+        "image": "/mostPopular/photo1.png",
+        "title": "The Ball",
+        "price": "64.00 CND",
+        "quantity": "05"
+    },
+    {
+        "id": 12,
+        "image": "/mostPopular/photo1.png",
         "title": "The Ball",
         "price": "64.00 CND",
         "quantity": "05"

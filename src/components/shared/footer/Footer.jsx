@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="max-w-[1167px] mx-auto flex flex-col justify-between gap-16 pt-10  space-y-8 lg:flex-row lg:space-y-0">
 
         <div className="">
-          <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
+          <a rel="noopener noreferrer" href="#" className="flex  space-x-3 lg:justify-start">
             <div className="flex items-center justify-center rounded-full dark:bg-violet-600 pb-[40px]">
               <img src="/logo.png" alt="nav logo" className="w-full h-full object-cover" />
             </div>
@@ -16,7 +16,6 @@ const Footer = () => {
               we aim to simplify and enhance the way people find services
               and businesses in their local communities, fostering closer
               connections between businesses and residents.</p>
-
             <div>
               <h2 className="font-Roboto text-[12px]">Email: info@mytsv.com</h2>
               <h2 className="font-Roboto text-[12px]">Mobile: +1 847-943-9634</h2>
@@ -25,10 +24,7 @@ const Footer = () => {
         </div>
 
 
-
-
-        <div className="grid grid-cols-1 md:grid-cols-3 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4 place-items-center md:place-items-start">
-
+        <div className="grid grid-cols-1 md:grid-cols-3 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4 place-items-start">
           <div className="space-y-3">
             <h3 className="font-Poppins font-medium text-[20px]">Useful Links</h3>
             <ul className="space-y-1 pt-[40px]">

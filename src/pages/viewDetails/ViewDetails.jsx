@@ -16,17 +16,17 @@ const ViewDetails = () => {
         <div>
             <Categories />
 
-            <div className="max-w-[1167px] mx-auto px-4 pt-[24px]">
+            <div className="max-w-[1167px] mx-auto px-4 pt-[24px] pb-[30px] lg:pb-[64px]">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[23px]">
                     <div className="col-span-2  ">
-                        <div className="bg-[#E9ECEF] h-[476px] rounded-xl">
+                        <div className="bg-[#E9ECEF] h-[300px] lg:h-[476px] rounded-xl">
                         </div>
 
                         <div className="py-8">
                             <h1 className="py-[15px] font-Poppins md:text-[20px] lg:text-[24px] font-medium text-[#333333]">Gaston's Bistro Catering - Chicago & Suburbs</h1>
                             <div className="flex flex-wrap justify-between gap-3 lg:gap-0">
                                 <div className="flex items-center gap-[8px]">
-                                    <img src="/mostPopular/photo01.png" alt="" className="h-[40px] w-[40px] rounded-full" />
+                                    <img src="/mostPopular/photo1.png" alt="" className="h-[40px] w-[40px] rounded-full" />
                                     <h1 className="md:text-[20px] lg:text-[20px] font-Poppins font-medium text-[#000000]">Karla Blair</h1>
                                 </div>
 
@@ -109,7 +109,7 @@ const ViewDetails = () => {
                             <div>
                                 <div className="flex items-center gap-4">
                                     <img
-                                        src="/mostPopular/photo01.png"
+                                        src="/mostPopular/photo1.png"
                                         alt=""
                                         className="h-[40px] w-[40px] rounded-full"
                                     />
@@ -148,7 +148,7 @@ const ViewDetails = () => {
                     <div className="col-span-2 md:col-span-1">
                         <h1 className="font-Poppins text-[20px] font-medium text-[#000000] pb-4">You might interest in related videos</h1>
                         <div className={`max-h-[800px] overflow-y-auto ${allData.length > 6 ? "scrollbar-thin scrollbar-thumb-red-100" : ""}`}>
-                            {allData.map((item, index) => {
+                            {allData.slice(0,6).map((item, index) => {
                                 return (
                                     <div key={index} className="">
                                         <div className="mb-4 lg:mb-[8px]">

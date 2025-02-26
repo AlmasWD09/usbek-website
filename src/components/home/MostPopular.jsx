@@ -4,12 +4,15 @@ import { RiShoppingCartLine } from "react-icons/ri"
 import { MdArrowForwardIos, } from "react-icons/md";
 import { IoMdPlay } from "react-icons/io";
 import { Select, Space } from 'antd';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const MostPopular = () => {
+    const navigate = useNavigate();
     const [showAll, setShowAll] = useState(false);
     const [products, setProducts] = useState([])
+    const [recommedData, setRecommedData] = useState([])
 
+    // most popular data get 
     useEffect(() => {
         fetch("/popularData.json")
             .then((response) => response.json())
@@ -17,9 +20,27 @@ const MostPopular = () => {
             .catch((error) => console.error("Error fetching data:", error));
     }, []);
 
-    const displayedProducts = showAll ? products : products.slice(0, 4);
-    const handleViewAllClick = () => {
-        setShowAll(true);
+
+
+    // recommended data get 
+    useEffect(() => {
+        fetch("/recommendedData.json")
+            .then((response) => response.json())
+            .then((data) => setRecommedData(data))
+            .catch((error) => console.error("Error fetching data:", error));
+    }, []);
+
+
+
+    const displayedProducts = showAll ? products : products.slice(0, 8);
+    const handleExploreMostpopular = () => {
+        navigate('/view-all')
+        // setShowAll(true);
+    };
+
+    const handleExploreRecommended = () => {
+        navigate('/view-all')
+        // setShowAll(true);
     };
 
     const handleChange = () => {
@@ -29,14 +50,14 @@ const MostPopular = () => {
     return (
         <section className="max-w-[1167px] mx-auto px-4 mt-8 md:mt-20 pb-[64px]">
             <div className="">
-                <div className="flex justify-between">
-                    <h2 className="text-[24px] font-medium font-Poppins text-[#000000]">
+                <div className="flex flex-col md:flex-row justify-between gap-3 md:gap-0">
+                    <h2 className="text-[20px] md:text-[24px] font-medium font-Poppins text-[#000000]">
                         Most popular
-                        <span className="font-Roboto font-normal text-[14px] text-[#666666] ml-4 pr-2">short by</span>
+                        <span className="font-Roboto font-normal text-[14px] text-[#666666] ml-1 md:ml-4 pr-1 md:pr-2">short by</span>
                         <Space wrap >
                             <Select
                                 defaultValue="All"
-                                style={{ width: 120, borderRadius: '9999px', }}
+                                style={{ width: 70, borderRadius: '9999px', }}
                                 onChange={handleChange}
                                 options={[
                                     { value: 'all', label: 'All' },
@@ -51,14 +72,14 @@ const MostPopular = () => {
                     {!showAll && (
                         <button
                             className="flex items-center gap-3 text-secondery text-[14px]  font-Roboto underline"
-                            onClick={handleViewAllClick}>
+                            onClick={handleExploreMostpopular}>
                             Explore all
                             <span><MdArrowForwardIos /></span>
                         </button>
                     )}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[14px] mt-[16px]">
-                    {displayedProducts.map((product, idx) => (
+                    {displayedProducts.map((item, idx) => (
                         <Link to={'/view-details'} key={idx}>
                             <div className="">
                                 <div className="flex flex-col max-w-lg md:min-h-[238px] space-y-6 overflow-hidden rounded-lg pb-2">
@@ -67,7 +88,7 @@ const MostPopular = () => {
                                             {/* Image container with hover effect */}
                                             <div className="relative group">
                                                 <img
-                                                    src="/mostPopular/photo01.png"
+                                                    src={item.image}
                                                     alt="popular photo"
                                                     className="object-contain w-full mb-4 transition-transform duration-300 transform group-hover:scale-105 group-hover:opacity-70 group-hover:transform-origin-center"
                                                 />
@@ -89,9 +110,9 @@ const MostPopular = () => {
 
                                         <div className="flex justify-between gap-2 p-1">
                                             <img
-                                                src="/mostPopular/photo01.png"
+                                                src="/mostPopular/photo6.png"
                                                 alt=""
-                                                className="w-[40px] h-[40px] rounded-full"
+                                                className="w-[40px] h-[40px] object-cover rounded-full"
                                             />
                                             <div>
                                                 <h1 className="font-Roboto text-[14px] text-[#333333]">
@@ -121,65 +142,16 @@ const MostPopular = () => {
 
 
             {/* Recommended section */}
-            {/* <div className="pt-[32px]">
-                <div className="flex justify-between">
-                    <h2 className="text-[24px] font-medium font-Poppins text-[#000000]">
-                        Recommended
-                    </h2>
-
-
-                    {!showAll && (
-                        <button
-                            className="flex items-center gap-3 text-secondery text-[14px]  font-Roboto underline"
-                            onClick={handleViewAllClick}>
-                            Explore all
-                            <span><MdArrowForwardIos /></span>
-                        </button>
-                    )}
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[14px] mt-[16px]">
-                    {displayedProducts.map((product, idx) => (
-                        <Link to={'/view-all'} key={idx}>
-                        <div className="">
-                            <div className="flex flex-col max-w-lg md:min-h-[238px]  space-y-6 overflow-hidden rounded-lg pb-2">
-                                <div>
-                                    <div className=" relative z-10">
-                                        <img src="/mostPopular/photo01.png" alt="popular photo" className="object-contain w-full mb-4" />
-                                        <span className="absolute z-20 bottom-0 right-0 m-2 px-2 py-1 rounded-md bg-[#999999] text-[12px] font-Roboto text-[#333333]">17:08</span>
-                                    </div>
-
-                                    <div className="flex justify-between gap-2 p-1">
-                                        <img src="/mostPopular/photo01.png" alt="" className="w-[40px] h-[40px] rounded-full" />
-                                        <div>
-                                            <h1 className="font-Roboto text-[14px] text-[#333333] ">Get the Best Discounts at Michail vs Robert's Barbershop! Only ...</h1>
-                                            <p className="font-Roboto text-[14px] text-[#666666]">Karla Blair</p>
-                                            <div className="flex items-center gap-3">
-                                                <p className="font-Roboto text-[12px] text-[#666666]"><span>10.5k</span> views</p>
-                                                <span className="h-2 w-2 bg-[#999999] rounded-full"></span>
-                                                <p className="font-Roboto text-[12px] text-[#666666]"><span>2</span> weeks ago</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        </Link>
-                    ))}
-                </div>
-            </div> */}
-
             <div className="pt-[32px]">
-                <div className="flex justify-between">
-                    <h2 className="text-[24px] font-medium font-Poppins text-[#000000]">
+                <div className="flex flex-col md:flex-row justify-between gap-3 md:gap-0">
+                    <h2 className="text-[20px] md:text-[24px] font-medium font-Poppins text-[#000000]">
                         Recommended
                     </h2>
 
                     {!showAll && (
                         <button
                             className="flex items-center gap-3 text-secondery text-[14px] font-Roboto underline"
-                            onClick={handleViewAllClick}
+                            onClick={handleExploreRecommended}
                         >
                             Explore all
                             <span>
@@ -190,7 +162,7 @@ const MostPopular = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[14px] mt-[16px]">
-                    {displayedProducts.map((product, idx) => (
+                    {recommedData.map((item, idx) => (
                         <Link to={'/view-details'} key={idx}>
                             <div className="">
                                 <div className="flex flex-col max-w-lg md:min-h-[238px] space-y-6 overflow-hidden rounded-lg pb-2">
@@ -199,7 +171,7 @@ const MostPopular = () => {
                                             {/* Image container with hover effect */}
                                             <div className="relative group">
                                                 <img
-                                                    src="/mostPopular/photo01.png"
+                                                    src={item.image}
                                                     alt="popular photo"
                                                     className="object-contain w-full mb-4 transition-transform duration-300 transform group-hover:scale-105 group-hover:opacity-70 group-hover:transform-origin-center"
                                                 />
@@ -221,7 +193,7 @@ const MostPopular = () => {
 
                                         <div className="flex justify-between gap-2 p-1">
                                             <img
-                                                src="/mostPopular/photo01.png"
+                                                src="/mostPopular/photo1.png"
                                                 alt=""
                                                 className="w-[40px] h-[40px] rounded-full"
                                             />
@@ -248,7 +220,6 @@ const MostPopular = () => {
                     ))}
                 </div>
             </div>
-
 
         </section>
     )
