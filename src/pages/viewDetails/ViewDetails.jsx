@@ -33,7 +33,10 @@ const ViewDetails = () => {
 
                                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                                             <div className="bg-red-300 md:col-span-1 h-full rounded">
-                                                <img src={item.image} alt="" className="w-full h-full object-cover" />
+                                                <div className=" relative z-10">
+                                                    <img src={item.image} alt="" className="w-full h-full object-cover" />
+                                                    <span className="absolute z-20 bottom-0 right-0 m-2 px-2 py-1 rounded-md bg-[#999999] text-[12px] font-Roboto text-[#333333]">17:08</span>
+                                                </div>
                                             </div>
 
 
