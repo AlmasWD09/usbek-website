@@ -23,16 +23,16 @@ const ViewDetails = () => {
                         </div>
 
                         <div className="py-8">
-                            <h1 className="py-[15px] font-Poppins text-[24px] font-medium text-[#333333]">Gaston's Bistro Catering - Chicago & Suburbs</h1>
-                            <div className="flex justify-between">
+                            <h1 className="py-[15px] font-Poppins md:text-[20px] lg:text-[24px] font-medium text-[#333333]">Gaston's Bistro Catering - Chicago & Suburbs</h1>
+                            <div className="flex flex-wrap justify-between gap-3 lg:gap-0">
                                 <div className="flex items-center gap-[8px]">
                                     <img src="/mostPopular/photo01.png" alt="" className="h-[40px] w-[40px] rounded-full" />
-                                    <h1 className="text-[20px] font-Poppins font-medium text-[#000000]">Karla Blair</h1>
+                                    <h1 className="md:text-[20px] lg:text-[20px] font-Poppins font-medium text-[#000000]">Karla Blair</h1>
                                 </div>
 
-                                <div className="flex items-center gap-[8px]">
+                                <div className="flex flex-wrap md:flex-row items-center gap-2 md:gap-1 lg:gap-[8px]">
 
-                                    <h1 className="bg-[#E9ECEF] px-4 py-[8px] rounded-full flex items-center gap-1 cursor-pointer">
+                                    <h1 className="bg-[#E9ECEF] px-4 py-2 md:py-[6px] lg:py-[8px] rounded-full flex items-center gap-1 cursor-pointer">
                                         <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <mask id="mask0_63_2705" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                                 <rect width="24" height="24" fill="#D9D9D9" />
@@ -44,7 +44,7 @@ const ViewDetails = () => {
                                         </span>
                                         <span>11.2k</span>
                                     </h1>
-                                    <h1 className="bg-[#E9ECEF] px-4 py-[8px] rounded-full flex items-center gap-1 cursor-pointer">
+                                    <h1 className="bg-[#E9ECEF] px-4 py-2 md:py-[6px] lg:py-[8px] rounded-full flex items-center gap-1 cursor-pointer">
                                         <span>
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M15.2381 20H4.7619V7L11.4286 0L12.619 1.25C12.7302 1.36667 12.8214 1.525 12.8929 1.725C12.9643 1.925 13 2.11667 13 2.3V2.65L11.9524 7H18.0952C18.6032 7 19.0476 7.2 19.4286 7.6C19.8095 8 20 8.46667 20 9V11C20 11.1167 19.9841 11.2417 19.9524 11.375C19.9206 11.5083 19.8889 11.6333 19.8571 11.75L17 18.8C16.8571 19.1333 16.619 19.4167 16.2857 19.65C15.9524 19.8833 15.6032 20 15.2381 20ZM6.66667 18H15.2381L18.0952 11V9H9.52381L10.8095 3.5L6.66667 7.85V18ZM4.7619 7V9H1.90476V18H4.7619V20H0V7H4.7619Z" fill="#666666" />
@@ -54,7 +54,7 @@ const ViewDetails = () => {
                                     </h1>
 
 
-                                    <h1 className="bg-[#E9ECEF] px-4 py-[8px] rounded-full flex items-center gap-1 cursor-pointer">
+                                    <h1 className="bg-[#E9ECEF] px-4 py-2 md:py-[6px] lg:py-[8px] rounded-full flex items-center gap-1 cursor-pointer">
                                         <span>
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <mask id="mask0_63_2784" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -69,7 +69,7 @@ const ViewDetails = () => {
                                     </h1>
 
 
-                                    <h1 className="bg-[#E9ECEF] px-4 py-[8px] rounded-full flex items-center gap-1 cursor-pointer">
+                                    <h1 className="bg-[#E9ECEF] px-4 py-2 md:py-[6px] lg:py-[8px] rounded-full flex items-center gap-1 cursor-pointer">
                                         <span>
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <mask id="mask0_63_2796" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -85,7 +85,7 @@ const ViewDetails = () => {
                                     </h1>
 
 
-                                    <h1 className="bg-[#E9ECEF] px-4 py-[8px] rounded-full flex items-center gap-1 cursor-pointer">
+                                    <h1 className="bg-[#E9ECEF] px-4 py-2 md:py-[6px] lg:py-[8px] rounded-full flex items-center gap-1 cursor-pointer">
                                         <span>
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <mask id="mask0_63_2817" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -146,7 +146,7 @@ const ViewDetails = () => {
 
                     {/* left site video/text */}
                     <div className="col-span-2 md:col-span-1">
-                        <h1 className="font-Poppins text-[20px] font-medium text-[#000000] pb-4">You might interest in related videos</h1>
+                        <h1 className="font-Poppins md:text-[20px] lg:text-[24px] font-medium text-[#000000] pb-4">You might interest in related videos</h1>
                         {allData.map((item, index) => {
                             return (
                                 <div key={index} className="">
