@@ -15,12 +15,12 @@ const ViewAll = () => {
         <div>
             <Categories />
 
-           <div className="max-w-[1167px] mx-auto px-4">
+           <div className="max-w-[1167px] mx-auto px-4 pb-[64px]">
              {/* all data show */}
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[14px] mt-[16px]">
                 {allData.map((product, idx) => (
                     <div key={idx} className="">
-                        <div className="flex flex-col max-w-lg md:min-h-[238px]  space-y-6 overflow-hidden rounded-lg shadow-md pb-2">
+                        <div className="flex flex-col max-w-lg md:min-h-[238px]  space-y-6 overflow-hidden rounded-lg pb-2">
                             <div>
                                 <div className=" relative z-10">
                                     <img src="/mostPopular/photo01.png" alt="popular photo" className="object-contain w-full mb-4" />

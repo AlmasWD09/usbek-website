@@ -37,7 +37,7 @@ const Categories = () => {
         {categories.map((category) => (
           <button
             key={category}
-            className={`px-3 py-2 rounded-lg border font-Roboto text-[14px] ${activeCategory === category ? "bg-primary text-white" : "bg-[#F8F9FA]"
+            className={`px-3 py-2 rounded-lg border font-Roboto text-[14px] ${activeCategory === category ? "bg-[#333333] text-white" : "bg-[#F8F9FA]"
               }`}
             onClick={() => setActiveCategory(category)}
           >

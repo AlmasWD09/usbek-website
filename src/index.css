@@ -11,3 +11,9 @@
 .ant-select-selector {
     border-radius: 9999px !important;
   }
+
+
+  /* active link style */
+  #sidebar a.active {
+    color: red;
+  }

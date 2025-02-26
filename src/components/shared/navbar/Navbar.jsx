@@ -12,7 +12,7 @@ const Navbar = () => {
 
     return (
         <section className='  z-50 shadow-sm w-full '>
-            <nav className="container mx-auto px-4 py-4 ">
+            <nav id="sidebar" className="container mx-auto px-4 py-4 ">
                 <div className="lg:flex lg:items-center lg:justify-between">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
@@ -72,7 +72,7 @@ const Navbar = () => {
                                 />
                             </div>
 
-                            <NavLink to='/' className="">
+                            <NavLink to='/' className={({ isActive }) => isActive ? "underline text-primary font-semibold hover:bg-[#E9ECEF] p-2 rounded-full" : ""}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_140_1089" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="#D9D9D9" />
@@ -84,7 +84,7 @@ const Navbar = () => {
 
                             </NavLink>
 
-                            <NavLink to='/' className="">
+                            <NavLink to='/' className={({ isActive }) => isActive ? "underline text-primary font-semibold hover:bg-[#E9ECEF] p-2 rounded-full" : ""}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_140_818" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="#D9D9D9" />
@@ -97,7 +97,7 @@ const Navbar = () => {
                             </NavLink>
 
 
-                            <NavLink to='/' className="">
+                            <NavLink to='/' className={({ isActive }) => isActive ? "underline text-primary font-semibold hover:bg-[#E9ECEF] p-2 rounded-full" : ""}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_140_116" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="#D9D9D9" />
@@ -109,7 +109,7 @@ const Navbar = () => {
 
                             </NavLink>
 
-                            <NavLink>
+                            <NavLink to='/' className={({ isActive }) => isActive ? "underline text-primary font-semibold hover:bg-[#E9ECEF] p-2 rounded-full" : ""}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_140_698" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="#D9D9D9" />
@@ -123,11 +123,11 @@ const Navbar = () => {
 
                         </div>
                         <div className="flex items-center gap-[12px]">
-                            <Link to={'/sign-in'} className="text-[16px] font-Roboto border border-[#666666] text-[#666666] px-[24px] py-[8px] rounded-full">
+                            <Link to={'/sign-in'} className="text-[16px] font-Roboto border border-[#666666] text-[#666666] px-[24px] py-[8px] rounded-full hover:bg-[#E9ECEF] hover:border-[#E9ECEF]">
                                 Sign In
                             </Link>
                             <Link to='/signUp'>
-                                <button className="text-[16px] font-Roboto bg-primary text-[#FFFFFF] px-[24px] py-[8px] rounded-full">Sign Up</button>
+                                <button className="text-[16px] font-Roboto bg-primary text-[#FFFFFF] px-[24px] py-[8px] rounded-full hover:bg-[#CD1A1E]">Sign Up</button>
                             </Link>
                         </div>
 
