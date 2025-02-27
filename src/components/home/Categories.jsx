@@ -32,7 +32,7 @@ const Categories = () => {
 
 
   return (
-    <div className="pt-4">
+    <div className="pt-20">
       <div className="flex justify-center gap-3 overflow-x-auto whitespace-nowrap ">
         {categories.map((category) => (
           <button

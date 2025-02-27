@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Categories from "../../components/home/Categories"
 import { IoMdPlay } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const ViewAll = () => {
     const [allData, setAllData] = useState([])
@@ -20,7 +21,8 @@ const ViewAll = () => {
                 {/* all data show */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[14px] mt-[16px]">
                     {allData.map((item, idx) => (
-                        <div key={idx} className="">
+                        <Link to={'/view-details'} key={idx}>
+                        <div className="">
                             <div className="">
                                 <div className="flex flex-col max-w-lg md:min-h-[238px] space-y-6 overflow-hidden rounded-lg pb-2">
                                     <div>
@@ -74,6 +76,7 @@ const ViewAll = () => {
                                 </div>
                             </div>
                         </div>
+                        </Link>
                     ))}
                 </div>
             </div>

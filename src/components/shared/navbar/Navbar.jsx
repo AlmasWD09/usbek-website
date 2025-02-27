@@ -11,7 +11,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <section className='  z-50 w-full '>
+        <section className='fixed  z-50 w-full bg-[#FFFFFF]'>
             <nav className="container mx-auto px-4 py-4 ">
                 <div className="lg:flex lg:items-center lg:justify-between">
                     <div className="flex items-center justify-between">
